@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    background: lightblue;
+    animation-name: exemplo;
+    animation-duration: 5s;
+    animation-delay: 2s; /*tempo que vai demorar para começar a animação*/
+    animation-iteration-count: infinite; /*número de vezes que a animação irá se repetir*/
+    animation-direction: alternate-reverse; /*direção em que a animação irá começar*/
+    animation-timing-function: ease-in; /*muda a velocidade da animação em determinado momento*/
+}
+.box:hover {
+    animation-play-state: paused;
+}
+
+@keyframes exemplo{
+    0% {
+        background: palegreen;
+        width: 200px;
+    }
+    50%{
+        background: darkblue;
+        width: 500px;
+    }
+    100%{
+        background: purple;
+        width: 100px;
+    }
+}
